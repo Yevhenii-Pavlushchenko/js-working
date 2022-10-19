@@ -288,15 +288,27 @@
 //   return firstArg.filter((el) => {
 //     if (secondArg.includes(el)) return true;
 //   } )
+// // }
+// function findMatches(firstArg, ...secondArg) {
+//   const matches = []; // Don't change this line
+// for (const i of firstArg){
+//   if (secondArg.includes(i)) {
+//     matches.push(i);
+//   }
 // }
-function findMatches(firstArg, ...secondArg) {
-  const matches = []; // Don't change this line
-for (const i of firstArg){
-  if (secondArg.includes(i)) {
-    matches.push(i);
-  }
+//   // Change code above this line
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
 }
-  // Change code above this line
-  return matches;
-}
-console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+// Change code below this line
+
+makePizza("Ultracheese");
